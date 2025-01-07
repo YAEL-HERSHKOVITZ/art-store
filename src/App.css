@@ -1,0 +1,87 @@
+/* רקע גרדיינט לכל העמוד */
+body {
+  background: linear-gradient(135deg, #faf9f8, #80a9ef); /* צבעים חמים */
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+/* הידר */
+.header {
+  width: 100%;
+  background-color: #1e1e1e;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* צללים */
+}
+
+header h1 {
+  color: #f1f1f1;
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 30px; /* גודל כפתור */
+  border: 2px solid transparent;  /* התחלה בלי גבול */
+  border-radius: 5px;   /* פינות מעוגלות */
+  background-color: transparent; /* רקע שקוף */
+  transition: all 0.3s ease;  /* אפקט מעבר חלק */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* צללים עדינים */
+}
+
+nav a:hover {
+  background-color: #0f0f0e; /* צבע ה-hover */
+  color: #080404; /* צבע טקסט בכפתור בזמן hover */
+  border-color: #0c0c01; /* צבע קו */
+  transform: translateY(-3px); /* אפקט זוזה קל למעלה */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* צללים יותר חזקים בזמן hover */
+}
+
+/* פוטר */
+.footer {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* עבור כל קישורי הניווט */
+nav a {
+  color: white;
+  padding: 12px 30px;  /* גודל כפתור */
+  border: 2px solid transparent;  /* התחלה בלי גבול */
+  border-radius: 5px;   /* פינות מעוגלות */
+  background-color: transparent; /* רקע שקוף */
+  transition: all 0.3s ease; /* אפקטי hover עם מעבר חלק */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* צללים עדינים */
+}
+
+nav a:hover {
+  background-color: #070606; /* צבע hover חמים */
+  color: #fff; /* הצבע לא משתנה */
+  border-color: #fefefc; /* צבע קו */
+  transform: translateY(-3px); /* אפקט זוזה קל למעלה */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* צללים יותר חזקים בזמן hover */
+}
+
+

@@ -1,0 +1,59 @@
+/* קביעת סגנון עבור רכיבי המוצרים */
+.product-card {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 15px;
+    margin: 15px;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* עיצוב התמונה */
+  .product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* עיצוב שם המוצר */
+  .product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  /* עיצוב כפתור לפרטים נוספים */
+  .details-button {
+    background-color: #011103;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+  }
+  
+  .details-button:hover {
+    background-color: #e07b00;
+  }
+  
+  /* רספונסיביות */
+  @media (max-width: 768px) {
+    .product-card {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  
