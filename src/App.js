@@ -14,9 +14,12 @@ function App() {
     { id: 2, img: "Birds.png", name: "ציפורים מצייצות", description: "אומנות סינית", size: 15 * 12, price: 5200 },
     { id: 3, img: "guitar.png", name: "גיטרה פורחת", description: "אומנות סינית", size: 15 * 62, price: 1200 },
     { id: 4, img: "Snowman.png", name: "בובת שלג", description: "אומנות סינית", size: 15 * 62, price: 2500 },
+    { id: 3, img: "guitar.png", name: "גיטרה פורחת", description: "אומנות סינית", size: 15 * 62, price: 1200 },
+    { id: 4, img: "Snowman.png", name: "בובת שלג", description: "אומנות סינית", size: 15 * 62, price: 2500 },
   ]);
   // עגלת מוצרים
   const [cart, setCart] = useState([]);
+ 
 
   ///פןנקצית הוספת מוצר
   const addToCart = (product) => {

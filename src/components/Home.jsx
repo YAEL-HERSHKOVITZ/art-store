@@ -27,7 +27,8 @@ function Home() {
           <div className="gallery-item">
             <img src="Images/Birds.png" alt="גרפיטי" />
             
-          </div>
+          </div> 
+         <br /> <br />
           <button className="cta-btn primary"> לכל הגלריה</button>
 
         </section>

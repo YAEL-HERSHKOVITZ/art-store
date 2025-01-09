@@ -3,7 +3,6 @@ import './ProductsCard.css';
 
 function ProductsCard({ product, addToCart }) {
   const handleAddToCart = () => {
-   
     addToCart(product);
   };
 
