@@ -8,7 +8,7 @@ import ProductDetails from './ProductDetails';
 import Login from './Login';
 import Cart from './Cart';
 
-export const Routing = ({product,addToCart ,cart,deleteProduct}) => { 
+export const Routing = ({product,addToCart ,cart,deleteProduct,calculateTotalPrice}) => { 
     return (                       
       <Routes>
         <Route path="/home" element={<Home />}/>
@@ -16,7 +16,7 @@ export const Routing = ({product,addToCart ,cart,deleteProduct}) => {
         <Route path="/Products" element={<Products product={product} addToCart={addToCart}/>} /> 
         <Route path="/productDetails/:id/:img/:name/:description/:size/:price" element={<ProductDetails />} />
         <Route path="/contact" element={<Contact />}/>
-        <Route path="/cart" element={<Cart cart={cart} deleteProduct={deleteProduct} addToCart={addToCart} />}/>
+        <Route path="/cart" element={<Cart cart={cart} deleteProduct={deleteProduct} addToCart={addToCart} calculateTotalPrice={calculateTotalPrice} />}/>
         <Route path="/Login" element={<Login />}/>
         <Route path="/" element={<Home/>}/>
       </Routes>

@@ -25,12 +25,11 @@ function App() {
     if (existingProduct) {
       setCart(cart.map(item =>
         item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-      ));
+      )); 
     } else {
       setCart([...cart, { ...product, quantity: 1 }]);
     }
   };
-  
 
   ///פונקציה למחיקת מוצר לפי id
   const deleteProduct = (product) => {
@@ -47,6 +46,9 @@ function App() {
     }
   }
 
+  const calculateTotalPrice = () => {
+    return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  };
   return (
     <Router>
       <div className="App">
@@ -62,7 +64,7 @@ function App() {
         </header>
         <main>
 
-          <Routing product={product} cart={cart} addToCart={addToCart} deleteProduct={deleteProduct} />
+          <Routing product={product} cart={cart} addToCart={addToCart} deleteProduct={deleteProduct} calculateTotalPrice={calculateTotalPrice} />
         </main>
         <footer className="footer">
           <p>&copy;כל הזכויות </p>

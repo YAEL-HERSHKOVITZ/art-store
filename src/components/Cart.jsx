@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'; // הוסף את השורה הזאת
 import './Cart.css'; // אם יש לך עיצוב CSS
 
-function Cart({ cart, deleteProduct, addToCart }) {
+function Cart({ cart, deleteProduct, addToCart,calculateTotalPrice }) {
+
+  
   return (
     <div className="cart-container">
       <h1>העגלה שלך</h1>
@@ -27,17 +29,19 @@ function Cart({ cart, deleteProduct, addToCart }) {
 
                 <button className="add-button" onClick={() => addToCart(product)}>+</button>
               </div>
+              
+
 
               <p className="product-name">{product.name}</p>
               <p className="product-size">{product.size}</p>
               <p className="product-price">{product.price} ₪</p>
             </div>
           ))}
-
+          <p>סה"כ: {calculateTotalPrice()} ₪</p>
           <Link to="/checkout" className="checkout-button">
             לעמוד התשלום
           </Link>
-          <Link to="/" className="back-to-shop-button">
+          <Link to="/Products" className="back-to-shop-button">
             חזור לקניות
           </Link>
         </>
