@@ -26,12 +26,12 @@ function Home() {
           </div>
           <div className="gallery-item">
             <img src="Images/Birds.png" alt="גרפיטי" />
-            
-          </div> 
-         <br /> <br />
-          <button className="cta-btn primary"> לכל הגלריה</button>
-
+          </div>
+          <div className="cta-buttons">
+            <button className="cta-btn primary">לכל הגלריה</button>
+          </div>
         </section>
+
 
 
       </div>
