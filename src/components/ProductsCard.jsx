@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import './ProductsCard.css';
 
 function ProductsCard({ product, addToCart }) {
+
   const handleAddToCart = () => {
     addToCart(product);
   };

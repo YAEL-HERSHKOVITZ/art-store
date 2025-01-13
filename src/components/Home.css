@@ -58,33 +58,21 @@
 /* גלריה */
 .gallery {
   display: flex;
-  flex-wrap: wrap; /* מאפשר לתמונות להתפשט בשורות */
-  justify-content: center; /* מיקום התמונות במרכז */
-  gap: 20px; /* רווח בין התמונות */
+  gap: 20px;
+  justify-content: center;
+  padding: 50px 20px;
+  background: white; /* רקע לבן */
 }
 
-.gallery-item {
-  width: 30%; /* כל תמונה תהיה ברוחב של 30% מהמרחב */
-  display: flex;
-  justify-content: center; /* ממקם את התמונה במרכז */
+.gallery-item img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.cta-buttons {
-  width: 100%; /* הכפתור יתפוס את כל רוחב הגלריה */
-  text-align: center; /* ממקם את הכפתור במרכז */
-  margin-top: 20px; /* רווח מעל הכפתור */
-}
-
-.cta-btn.primary {
-  padding: 10px 20px;
-  background-color: #FF5733;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.cta-btn.primary:hover {
-  background-color: #FF4500;
+.gallery-item img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }

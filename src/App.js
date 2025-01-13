@@ -19,20 +19,31 @@ function App() {
   ]);
   // עגלת מוצרים
   const [cart, setCart] = useState([]);
- 
+
+  const [popupMessage, setPopupMessage] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
+
 
   ///פןנקצית הוספת מוצר
   const addToCart = (product) => {
     const existingProduct = cart.find(item => item.id === product.id);
-  
+
     if (existingProduct) {
       setCart(cart.map(item =>
         item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-      )); 
+      ));
     } else {
       setCart([...cart, { ...product, quantity: 1 }]);
     }
+
+    // הצגת הודעת פופ-אפ
+    setPopupMessage(`המוצר "${product.name}" !המוצר נוסף בהצלחה`);
+    setShowPopup(true);
+
+    // הסתרת הפופ-אפ לאחר 3 שניות
+    setTimeout(() => setShowPopup(false), 3000);
   };
+
 
   ///פונקציה למחיקת מוצר לפי id
   const deleteProduct = (product) => {
@@ -52,9 +63,20 @@ function App() {
   const calculateTotalPrice = () => {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
   };
+
   return (
     <Router>
       <div className="App">
+
+        {showPopup && (
+          <div className="popup">
+            <button className="popup-close" onClick={() => setShowPopup(false)}>×</button>
+            <p>{popupMessage}</p>
+          </div>
+        )}
+
+
+
         <header className="header">
           <nav>
             <Link to="/Home">דף הבית</Link>
@@ -72,7 +94,9 @@ function App() {
         <footer className="footer">
           <p>&copy;כל הזכויות </p>
         </footer>
+
       </div>
+
     </Router>
 
   );

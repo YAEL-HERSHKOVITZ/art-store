@@ -85,3 +85,55 @@ nav a:hover {
 }
 
 
+/* עיצוב הפופ-אפ */
+.popup {
+  position: fixed;
+  top: 20px; /* מרחק מלמעלה */
+  right: 20px; /* מרחק מהצד הימני */
+  background-color: rgba(255, 255, 255, 0.95); /* רקע עם שקיפות */
+  padding: 15px; /* רווח פנימי */
+  border: 3px solid black; /* מסגרת שחורה */
+  border-radius: 10px; /* פינות מעוגלות */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* צל */
+  z-index: 1000; /* כדי להציג מעל אלמנטים אחרים */
+  text-align: right; /* יישור טקסט לימין */
+  animation: popup-slide-in 0.5s ease; /* אפקט כניסה */
+  max-width: 300px; /* רוחב מקסימלי */
+}
+
+/* אנימציה להופעת הפופ-אפ */
+@keyframes popup-slide-in {
+  from {
+      transform: translateX(50px); /* כניסה מהצד הימני */
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.popup p {
+  font-size: 1rem;
+  color: #333; /* צבע טקסט כהה */
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.popup-close {
+  position: absolute;
+  top: 5px;
+  left: 5px; /* כפתור סגירה בצד שמאל של הפופ-אפ */
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.popup-close:hover {
+  color: #333;
+}
+
+
