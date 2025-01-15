@@ -1,0 +1,130 @@
+/* מבוא עם תמונה */
+.intro-section {
+  position: relative;
+  text-align: center;
+  height: 50vh; /* גובה חצי מסך */
+  background: url('/public/Images/Home.jpg') no-repeat center center/cover; /* עדכני את כתובת התמונה */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* רקע שחור חצי שקוף */
+  top: 0;
+  left: 0;
+}
+
+.intro-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+}
+
+.dynamic-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cta-buttons {
+  margin-top: 20px;
+}
+
+.cta-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #4169e1;
+}
+
+/* גלריה */
+.gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  background-color: #f9f9f9; /* רקע בהיר לגלריה */
+  border-top: 1px solid #ddd;
+}
+
+.gallery-item img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.footer-spacer {
+  background-color: white; /* רקע לבן */
+  height: 20px; /* גובה הרווח */
+  margin-top: 20px; /* רווח נוסף לפני הפוטר */
+}
+/* מיקום הכפתור והוספת רקע לבן */
+.gallery-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px; /* העלה את הכפתור קצת */
+  background-color: white; /* רקע לבן */
+  padding: 10px; /* ריווח פנימי */
+  border-radius: 5px; /* פינות מעוגלות לרקע */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* צל קל */
+  z-index: 10; /* מוודא שהכפתור יישאר מעל אלמנטים אחרים */
+}
+
+/* מיכל שממקד את הכפתור ומוסיף רקע לבן */
+.button-container {
+  background-color: white; /* רקע לבן מתחת לכפתור */
+  padding: 20px; /* רווח סביב הכפתור */
+  display: flex;
+  justify-content: center; /* מרכז את הכפתור */
+  align-items: center;
+  margin: 0 auto; /* ממורכז בעמוד */
+  width: 100%;
+  box-sizing: border-box; /* לוודא שכל הרווחים נכנסים בתוך הגודל הכולל */
+}
+
+/* עיצוב לינק כך שיתנהג כמו כפתור */
+.cta-btn.primary {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #1e90ff; /* צבע הרקע */
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* מסיר קו תחתון */
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn.primary:hover {
+  background-color: #4169e1; /* צבע רקע כשמעבירים מעל */
+  transform: scale(1.05); /* אפקט הגדלה */
+}
+
+.cta-btn.primary:active {
+  background-color: #3748b4; /* צבע רקע כשנלחץ */
+}
+

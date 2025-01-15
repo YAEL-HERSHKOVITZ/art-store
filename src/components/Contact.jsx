@@ -1,5 +1,4 @@
-import './Contact.css';
-
+import '../Css/Contact.css';
 function Contact() {
   return (
     <div className="contact-container">

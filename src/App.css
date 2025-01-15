@@ -1,60 +1,45 @@
-/* רקע גרדיינט לכל העמוד */
-body {
-  background: linear-gradient(135deg, #faf9f8, #80a9ef); /* צבעים חמים */
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  line-height: 1.6;
-}
-/* הידר */
-.header {
-  width: 100%;
-  background-color: #1e1e1e;
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* צללים */
+
+.popup {
+  position: fixed; /* כדי לקבע את הפופ-אפ במקום מסוים בעמוד */
+  top: 10%; /* מרחק מלמעלה */
+  right: 10px; /* מרחק מצד ימין */
+  width: 300px; /* רוחב הפופ-אפ */
+  height: 50px; /* גובה הפופ-אפ */
+  padding: 20px; /* מרווח פנימי */
+  background: #f8f9fa; /* צבע רקע עדין */
+  border: 2px solid #007bff; /* מסגרת כחולה */
+  border-radius: 10px; /* פינות מעוגלות */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* צל */
+  z-index: 1000; /* כדי להבטיח שהפופ-אפ מעל הכל */
+  overflow-y: auto; /* מאפשר גלילה אם התוכן ארוך מדי */
 }
 
-header h1 {
-  color: #f1f1f1;
-  font-family: 'Arial', sans-serif;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+.popup-close {
+  position: absolute; /* מיקום יחסי למסגרת */
+  top: 10px; /* מרחק מלמעלה */
+  right: 10px; /* מרחק מצד ימין */
+  background: none; /* אין רקע לכפתור */
+  border: none; /* ללא מסגרת */
+  font-size: 20px; /* גודל טקסט */
+  cursor: pointer; /* סימון של יד בעת מעבר על הכפתור */
+  color: #007bff; /* צבע כחול */
+  font-weight: bold; /* טקסט מודגש */
+  transition: color 0.3s; /* אפקט מעבר בצבע */
 }
 
-nav {
-  margin-top: 10px;
+.popup-close:hover {
+  color: #0056b3; /* צבע כהה יותר בהובר */
 }
 
-nav a {
-  margin: 0 15px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 12px 30px; /* גודל כפתור */
-  border: 2px solid transparent;  /* התחלה בלי גבול */
-  border-radius: 5px;   /* פינות מעוגלות */
-  background-color: transparent; /* רקע שקוף */
-  transition: all 0.3s ease;  /* אפקט מעבר חלק */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* צללים עדינים */
-}
 
-nav a:hover {
-  background-color: #0f0f0e; /* צבע ה-hover */
-  color: #080404; /* צבע טקסט בכפתור בזמן hover */
-  border-color: #0c0c01; /* צבע קו */
-  transform: translateY(-3px); /* אפקט זוזה קל למעלה */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* צללים יותר חזקים בזמן hover */
-}
 
 /* פוטר */
 .footer {
-  background-color: #1e1e1e;
+  background-color: rgba(30, 30, 30, 0.8); /* שקיפות */
   color: #f1f1f1;
   text-align: center;
-  padding: 20px;
-  font-size: 1rem;
+  padding: 10px;
+  font-size: 0.8rem;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -64,76 +49,3 @@ nav a:hover {
   margin: 0;
   font-family: 'Arial', sans-serif;
 }
-
-/* עבור כל קישורי הניווט */
-nav a {
-  color: white;
-  padding: 12px 30px;  /* גודל כפתור */
-  border: 2px solid transparent;  /* התחלה בלי גבול */
-  border-radius: 5px;   /* פינות מעוגלות */
-  background-color: transparent; /* רקע שקוף */
-  transition: all 0.3s ease; /* אפקטי hover עם מעבר חלק */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* צללים עדינים */
-}
-
-nav a:hover {
-  background-color: #070606; /* צבע hover חמים */
-  color: #fff; /* הצבע לא משתנה */
-  border-color: #fefefc; /* צבע קו */
-  transform: translateY(-3px); /* אפקט זוזה קל למעלה */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* צללים יותר חזקים בזמן hover */
-}
-
-
-/* עיצוב הפופ-אפ */
-.popup {
-  position: fixed;
-  top: 20px; /* מרחק מלמעלה */
-  right: 20px; /* מרחק מהצד הימני */
-  background-color: rgba(255, 255, 255, 0.95); /* רקע עם שקיפות */
-  padding: 15px; /* רווח פנימי */
-  border: 3px solid black; /* מסגרת שחורה */
-  border-radius: 10px; /* פינות מעוגלות */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* צל */
-  z-index: 1000; /* כדי להציג מעל אלמנטים אחרים */
-  text-align: right; /* יישור טקסט לימין */
-  animation: popup-slide-in 0.5s ease; /* אפקט כניסה */
-  max-width: 300px; /* רוחב מקסימלי */
-}
-
-/* אנימציה להופעת הפופ-אפ */
-@keyframes popup-slide-in {
-  from {
-      transform: translateX(50px); /* כניסה מהצד הימני */
-      opacity: 0;
-  }
-  to {
-      transform: translateX(0);
-      opacity: 1;
-  }
-}
-
-.popup p {
-  font-size: 1rem;
-  color: #333; /* צבע טקסט כהה */
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-}
-
-.popup-close {
-  position: absolute;
-  top: 5px;
-  left: 5px; /* כפתור סגירה בצד שמאל של הפופ-אפ */
-  background: none;
-  border: none;
-  font-size: 1rem;
-  color: #888;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.popup-close:hover {
-  color: #333;
-}
-
-

@@ -1,4 +1,4 @@
-import './ProductDetails.css';
+import '../Css/ProductDetails.css';
 import { useParams } from 'react-router-dom';
 
 function ProductDetails() {
@@ -6,28 +6,27 @@ function ProductDetails() {
 
   return (
     <div className="product-details">
-      <h1>תמונה מספר: {id}</h1>
+      <div className="text-container">
+        <h1>תמונה מספר: {id}</h1>
+        <p>
+          <span>תיאור:</span> {description}
+        </p>
+        <p>
+          <span>גודל:</span> {size}
+        </p>
+        <p className="price">
+          <span>מחיר:</span> {price} ₪
+        </p>
+        <a href="/Products" className="back-button">
+          חזרה למוצרים
+        </a>
+      </div>
       <img src={`/Images/${img}`} alt={name} />
-      <p>
-        <span>תיאור:</span> {description}
-      </p>
-      <p>
-        <span>גודל:</span> {size}
-      </p>
-      <p className="price">
-        <span>מחיר:</span> {price} ₪
-      </p>
-      <a href="/Products" className="back-button">
-        חזרה למוצרים
-      </a>
     </div>
   );
 }
 
 export default ProductDetails;
-
-
-
 
 
 

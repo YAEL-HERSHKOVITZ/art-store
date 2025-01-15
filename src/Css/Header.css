@@ -1,0 +1,61 @@
+/* הידר - סידור מחדש */
+.header {
+    display: flex; /* מסדר את האלמנטים בשורה אחת */
+    justify-content: space-between; /* מרווח בין הקבוצות */
+    align-items: center; /* יישור אנכי */
+    background-color: #1e1e1e; /* צבע רקע */
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1rem; /* גודל טקסט */
+    color: #fff; /* צבע טקסט */
+}
+
+/* תפריט מרכזי */
+.nav-center {
+    display: flex; /* מסדר את הלינקים בשורה */
+    justify-content: center; /* מיקום במרכז */
+    gap: 20px; /* רווח בין הקישורים */
+    flex-grow: 1; /* תופס את המקום הפנוי */
+}
+
+.nav-center a {
+    color: #fff; /* צבע טקסט */
+    text-decoration: none; /* ללא קו תחתון */
+    font-size: 1rem; /* גודל טקסט */
+    padding: 5px 10px; /* מרווח פנימי */
+    border: 2px solid transparent; /* מסגרת שקופה */
+    border-radius: 5px; /* עיגול פינות */
+    transition: all 0.3s ease; /* אפקט מעבר */
+}
+
+.nav-center a:hover {
+    background-color: #333; /* רקע בהובר */
+}
+
+/* הרשמה והתחברות */
+.nav-auth {
+    display: flex; /* מסדר את הלינקים בשורה אחת */
+    gap: 10px; /* רווח קטן ביניהם */
+    align-items: center; /* יישור אנכי */
+    white-space: nowrap; /* מניעת שבירת שורה */
+}
+
+/* קישור התחברות והרשמה */
+.nav-auth a {
+    color: #fff; /* צבע טקסט */
+    text-decoration: none; /* ללא קו תחתון */
+    font-size: 0.9rem; /* גודל טקסט */
+}
+
+/* התחבר לאתר */
+.nav-auth .login {
+    color: #fff; /* צבע לבן */
+    font-size: 0.9rem; /* גודל טקסט */
+    margin-right: 15px; /* הוספת רווח מימין */
+}
+
+/* מפריד בין האופציות */
+.nav-auth .divider {
+    color: #fff; /* צבע לבן */
+    margin: 0 5px; /* מרווח משני הצדדים */
+}

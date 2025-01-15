@@ -1,5 +1,5 @@
 import React, { useState } from "react"; 
-import "./Checkout.css";
+import '../Css/Checkout.css';
 
 function Checkout({ calculateTotalPrice }) {
   const [showPopup, setShowPopup] = useState(false); // הגדרת state
