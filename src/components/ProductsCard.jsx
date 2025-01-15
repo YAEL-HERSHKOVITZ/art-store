@@ -27,12 +27,14 @@ function ProductsCard({ product, addToCart, deleteProductFromArr }) {
         <button className="details-button" onClick={() => deleteProductFromArr(product.id)}>
           מחק מוצר
         </button>}
+        
 
         
         <Link to={`/productDetails/${product.id}/${product.img}/${product.name}/${product.description}/${product.size}/${product.price}`}>
           <button className="details-button">לפרטים נוספים</button>
         </Link>
-        
+
+
 
 
 

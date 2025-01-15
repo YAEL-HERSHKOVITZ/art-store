@@ -1,11 +1,12 @@
 import '../Css/Header.css';
-
-
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import MyContext from '../Context/Context';
 import { useState } from 'react';
-const Header = ({ cart }) => {
+
+
+
+const Header = ({ cart ,resetCart}) => {
 
 
 
@@ -24,16 +25,16 @@ const Header = ({ cart }) => {
         setInputValues({ username: '', password: '' });
     };
 
-    // פונקציה להתנתקות ואיפוס השדות
     const handleLogout = () => {
         logout();  // התנתקות
         resetInputs();  // איפוס השדות
+        resetCart(); // איפוס העגלה כשמתנתקים
+
     };
 
     return (
 
         <header className="header">
-            {/* התחברות והרשמה - בצד ימין */}
             <div className="nav-auth">
                 <span className="login">{user == null ? "התחבר לאתר" : `שלום ל${user.username}`}</span>
                 {currentUser?.role === "manager" && <Link to="/UserManager">משתמשים</Link>}
@@ -44,7 +45,7 @@ const Header = ({ cart }) => {
                         <Link to="/Registr">הרשמה</Link>
                     </>
                 ) : (
-                    <button onClick={handleLogout}>התנתקות</button>
+                    <button className="btn-logout" onClick={handleLogout}>התנתקות</button>
                 )}
 
             </div>

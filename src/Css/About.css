@@ -108,3 +108,18 @@ body {
 .cta-btn:active {
   background-color: #3748b4; /* צבע הרקע כשנלחץ */
 }
+/* עיצוב כפתור ההתנתקות */
+.nav-auth button {
+  background-color: #1e90ff; /* צבע רקע אדום */
+  color: white; /* צבע טקסט לבן */
+  border: none; /* ללא מסגרת */
+  padding: 8px 16px; /* ריווח פנימי */
+  font-size: 1rem; /* גודל טקסט */
+  cursor: pointer; /* סמן העכבר משתנה לכפתור */
+  border-radius: 5px; /* פינות מעוגלות */
+  transition: all 0.3s ease; /* אפקט מעבר */
+}
+
+.nav-auth button:hover {
+  background-color: #1e90ff; /* צבע רקע כהה יותר בהובר */
+}

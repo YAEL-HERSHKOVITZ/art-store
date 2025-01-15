@@ -1,3 +1,4 @@
+/* עיצוב הכללי של טופס הקשר */
 .contact-container {
   max-width: 600px;
   margin: 50px auto;
@@ -68,5 +69,56 @@
 }
 
 .contact-submit:hover {
+  background-color: #d16900;
+}
+
+/* עיצוב הפופ-אפ */
+.contact-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; /* הפופ-אפ לא יוצג בהתחלה */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.contact-popup.show {
+  display: flex; /* הפופ-אפ יוצג כאשר יש את מחלקת show */
+}
+
+.contact-popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-popup h2 {
+  color: #333;
+}
+
+.contact-popup p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.contact-popup button {
   background-color: #e07b00;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-popup button:hover {
+  background-color: #d16900;
 }

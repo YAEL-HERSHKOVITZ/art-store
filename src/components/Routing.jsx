@@ -13,8 +13,7 @@ import UserManager from './UserManager';
 import AdminOptions from './AdminOptions';
 
 
-
-export const Routing = ({product,addToCart ,cart,deleteProduct,calculateTotalPrice,deleteProductFromArr,addProdact}) => { 
+export const Routing = ({ product, cart, addToCart, deleteProduct, calculateTotalPrice, deleteProductFromArr, addProdact}) => { 
     return (                       
       <Routes>
         <Route path="/home" element={<Home />}/>
